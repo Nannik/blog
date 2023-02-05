@@ -1,4 +1,5 @@
 .AppLink {
+  margin: 0 5px;
   color: var(--primary-color);
 }
 
@@ -8,4 +9,9 @@
 
 .secondary {
   color: var(--inverted-secondary-color);
+}
+
+.disabled {
+  color: var(--disabled-color);
+  cursor: default;
 }
