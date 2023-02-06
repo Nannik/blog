@@ -24,8 +24,6 @@ const Navbar = ({className}: NavbarProps) => {
 
     return (
         <div className={classNames(cls.navbar, {}, [className])}>
-            <ThemeSwitcher />
-
             <div>
                 {linksData.map(data =>
                     <AppLink

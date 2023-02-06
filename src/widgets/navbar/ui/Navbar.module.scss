@@ -1,6 +1,6 @@
 .navbar {
   width: 100%;
-  height: 50px;
+  height: var(--navbar-height);
   background: var(--inverted-bg-color);
 
   display: flex;
