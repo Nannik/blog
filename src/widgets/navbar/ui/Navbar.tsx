@@ -2,7 +2,7 @@ import {classNames} from "@/shared/lib";
 import {AppLink} from "@/shared/ui";
 import cls from "./Navbar.module.scss";
 import {AppLinkTheme} from "@/shared/ui/appLink/AppLink";
-import {ThemeSwitcher} from "@/widgets/themeSwitcher";
+import {ThemeSwitcher} from "@/features/ThemeSwitcher";
 import {LinkProps, useLocation} from "react-router-dom";
 
 interface LinkData {
