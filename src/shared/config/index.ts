@@ -1,2 +1,1 @@
-
-export { LocalStorageKeys } from './localStorageKeys/localStorageKeys'
+export { LocalStorageKeys } from './localStorageKeys/localStorageKeys';

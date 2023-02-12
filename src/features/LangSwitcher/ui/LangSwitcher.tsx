@@ -1,15 +1,15 @@
-import {classNames} from "@/shared/lib";
-import cls from "./LangSwitcher.module.scss";
-import {Button, ButtonTheme} from "@/shared/ui";
-import {useTranslation} from "react-i18next";
-import React from "react";
-import {useToggleLanguage} from "@/shared/language";
+import { useTranslation } from 'react-i18next';
+import React from 'react';
+import { classNames } from '@/shared/lib';
+import cls from './LangSwitcher.module.scss';
+import { Button, ButtonTheme } from '@/shared/ui';
+import { useToggleLanguage } from '@/shared/language';
 
 interface LangSwitcherProps {
     className?: string;
 }
 
-const LangSwitcher = ({className}: LangSwitcherProps) => {
+function LangSwitcher({ className }: LangSwitcherProps) {
     const { toggleLanguage } = useToggleLanguage();
     const { t } = useTranslation();
 
@@ -24,8 +24,8 @@ const LangSwitcher = ({className}: LangSwitcherProps) => {
             </Button>
         </div>
     );
-};
+}
 
 export {
-    LangSwitcher
+    LangSwitcher,
 };
