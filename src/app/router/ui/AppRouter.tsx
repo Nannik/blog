@@ -1,11 +1,11 @@
 import React, { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { routerConfig } from '@/app/router';
+import { PageLoader } from '@/widgets/pageLoader/';
 
 function AppRouter() {
-    // todo write loading component
     return (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<PageLoader />}>
             <Routes>
                 {routerConfig.map(({ element, path }) => (
                     <Route

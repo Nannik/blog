@@ -11,8 +11,7 @@
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "lint:scss": "stylelint \"**/*.scss\"",
-    "lint:scss:fix": "stylelint \"**/*.scss\" --fix",
-    "test": "jest"
+    "lint:scss:fix": "stylelint \"**/*.scss\" --fix"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
