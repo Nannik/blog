@@ -2,6 +2,7 @@ module.exports = {
     env: {
         browser: true,
         es2021: true,
+        jest: true,
     },
     extends: [
         'plugin:react/recommended',
@@ -25,7 +26,7 @@ module.exports = {
         'i18next/no-literal-string': ['error', { markupOnly: true }],
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
-        'max-len': [2, { code: 120 }],
+        'max-len': [2, { code: 120, ignoreComments: true }],
         indent: [2, 4],
         'no-unused-vars': 'warn',
         'react/jsx-props-no-spreading': 'warn',
