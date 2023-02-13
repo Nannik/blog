@@ -21,8 +21,10 @@ module.exports = {
         'react',
         '@typescript-eslint',
         'i18next',
+        'unused-imports',
     ],
     rules: {
+        'unused-imports/no-unused-imports': 'error',
         'i18next/no-literal-string': ['error', { markupOnly: true }],
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
@@ -40,6 +42,7 @@ module.exports = {
         'react/react-in-jsx-scope': 'off',
         'no-shadow': 'off',
         'react/function-component-definition': 'off',
+        'react/jsx-no-useless-fragment': 'off',
     },
     globals: {
         __IS_DEV__: true,

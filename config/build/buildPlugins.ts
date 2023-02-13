@@ -1,7 +1,6 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import { BuildOptions } from './types/config';
 
 export const buildPlugins = (options: BuildOptions): webpack.WebpackPluginInstance[] => {
@@ -20,6 +19,6 @@ export const buildPlugins = (options: BuildOptions): webpack.WebpackPluginInstan
         }),
         new webpack.ProgressPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new ReactRefreshPlugin(),
+        // new ReactRefreshPlugin(),
     ];
 };
