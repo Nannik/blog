@@ -24,12 +24,18 @@ module.exports = {
         'unused-imports',
     ],
     rules: {
-        'unused-imports/no-unused-imports': 'error',
-        'i18next/no-literal-string': ['error', { markupOnly: true }],
+        indent: [2, 4],
+        'i18next/no-literal-string': [
+            'error',
+            {
+                markupOnly: true,
+                ignoreAttribute: ['data-testid'],
+            },
+        ],
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
         'max-len': [2, { code: 120, ignoreComments: true }],
-        indent: [2, 4],
+        'unused-imports/no-unused-imports': 'error',
         'no-unused-vars': 'warn',
         'react/jsx-props-no-spreading': 'warn',
         'import/prefer-default-export': 'off',
@@ -47,4 +53,12 @@ module.exports = {
     globals: {
         __IS_DEV__: true,
     },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
 };

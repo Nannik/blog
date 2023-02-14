@@ -4,7 +4,7 @@ import { useTheme } from '@/shared/theme';
 import { classNames } from '@/shared/lib';
 import { AppRouter } from '@/app/router';
 import { Navbar } from '@/widgets/navbar';
-import { Sidebar } from '@/widgets/sidebar';
+import { Sidebar } from '@/widgets/Sidebar';
 
 function App() {
     const { theme } = useTheme();

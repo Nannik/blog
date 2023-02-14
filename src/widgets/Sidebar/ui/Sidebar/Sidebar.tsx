@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib';
-import cls from './Sidebar.module.scss';
 import { Button, ButtonTheme } from '@/shared/ui';
 import { ThemeSwitcher } from '@/features/ThemeSwitcher';
 import { LangSwitcher } from '@/features/LangSwitcher';
+import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
     className?: string;
@@ -19,8 +19,12 @@ function Sidebar({ className }: SidebarProps) {
     };
 
     return (
-        <div className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}>
+        <div
+            data-testid="sidebar"
+            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
+        >
             <Button
+                data-testid="sidebar_toggle"
                 theme={ButtonTheme.CLEAR}
                 onClick={toggleCollapsed}
             >

@@ -8,7 +8,7 @@ interface UseToggleLanguageResult {
 export const useToggleLanguage = (): UseToggleLanguageResult => {
     const { i18n } = useTranslation();
 
-    const toggleLanguage = () => {
+    const toggleLanguage = async () => {
         const langCode = i18n.language === 'en' ? 'ua' : 'en';
         i18n.changeLanguage(langCode);
         localStorage.setItem(LocalStorageKeys.languageCode, langCode);
