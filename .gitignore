@@ -1,4 +1,5 @@
 /build
 /node_modules/
 /.idea
+.loki
 package-lock.json
