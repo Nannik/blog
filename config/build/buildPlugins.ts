@@ -8,7 +8,7 @@ import { BuildOptions } from './types/config';
 export const buildPlugins = (options: BuildOptions): webpack.WebpackPluginInstance[] => {
     const { paths, isDev } = options;
 
-    return [
+    const plugins = [
         new HtmlWebpackPlugin({
             template: paths.html,
         }),
@@ -19,13 +19,26 @@ export const buildPlugins = (options: BuildOptions): webpack.WebpackPluginInstan
         new webpack.DefinePlugin({
             __IS_DEV__: isDev,
         }),
-        new BundleAnalyzerPlugin({
-            openAnalyzer: false,
-        }),
         new webpack.ProgressPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
-        new ReactRefreshPlugin({
-            overlay: false,
-        }),
     ];
+
+    if (isDev) {
+        plugins.push(
+            new ReactRefreshPlugin({
+                overlay: false,
+            }),
+        );
+
+        plugins.push(
+            new webpack.HotModuleReplacementPlugin(),
+        );
+
+        plugins.push(
+            new BundleAnalyzerPlugin({
+                openAnalyzer: false,
+            }),
+        );
+    }
+
+    return plugins;
 };
