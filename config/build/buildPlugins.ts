@@ -19,11 +19,11 @@ export const buildPlugins = (options: BuildOptions): webpack.WebpackPluginInstan
         new webpack.DefinePlugin({
             __IS_DEV__: isDev,
         }),
-        new BundleAnalyzerPlugin(),
-        new webpack.ProgressPlugin(),
-        new webpack.HotModuleReplacementPlugin({
+        new BundleAnalyzerPlugin({
             openAnalyzer: false,
         }),
+        new webpack.ProgressPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
         new ReactRefreshPlugin({
             overlay: false,
         }),
