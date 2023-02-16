@@ -1,4 +1,5 @@
 /build
 /node_modules/
 /.idea
+/storybook-static
 package-lock.json
