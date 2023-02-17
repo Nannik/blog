@@ -5,17 +5,17 @@ import { PageLoader } from '@/widgets/PageLoader/';
 
 function AppRouter() {
     return (
-        <Suspense fallback={<PageLoader />}>
+        <Suspense fallback={ <PageLoader /> }>
             <Routes>
                 {routerConfig.map(({ element, path }) => (
                     <Route
-                        key={path}
-                        path={path}
-                        element={(
+                        key={ path }
+                        path={ path }
+                        element={ (
                             <div className="page-wrapper">
                                 { element }
                             </div>
-                        )}
+                        ) }
                     />
                 ))}
             </Routes>

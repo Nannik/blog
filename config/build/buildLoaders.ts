@@ -25,7 +25,7 @@ export const buildLoaders = (options: BuildOptions): webpack.RuleSetRule[] => {
             loader: 'babel-loader',
             options: {
                 presets: [
-                    ['@babel/preset-env', { targets: 'defaults' }],
+                    [ '@babel/preset-env', { targets: 'defaults' } ],
                 ],
             },
         },

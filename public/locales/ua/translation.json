@@ -1,6 +1,7 @@
 {
   "Test text": "Тестовий текст",
   "Lang": "Українська",
+  "LangCode": "UA",
   "Toggle": "Переключити",
   "Error happened": "Сталася помилка"
 }

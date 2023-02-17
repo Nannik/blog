@@ -1,8 +1,10 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta } from '@storybook/react';
 
 import { AppLink, AppLinkTheme } from './AppLink';
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from '@/shared/theme';
+import {
+    appThemeCreator, createTemplate, TemplateCreator, TemplateProxy,
+} from '@/shared/lib';
 
 export default {
     title: 'shared/AppLink',
@@ -16,37 +18,39 @@ export default {
     },
 } as ComponentMeta<typeof AppLink>;
 
-const Template: ComponentStory<typeof AppLink> = (args) => <AppLink {...args} />;
+type AppLinkTemplateCreator<T> = TemplateCreator<T, typeof AppLink>;
+const themeCreator: AppLinkTemplateCreator<AppLinkTheme> = (theme) => (template) => {
+    if (!template.args) template.args = {};
+    template.args.theme = theme;
 
-export const Primary = Template.bind({});
-Primary.args = {
-    theme: AppLinkTheme.PRIMARY,
+    return template;
 };
 
-export const PrimaryDark = Template.bind({});
-PrimaryDark.args = {
-    theme: AppLinkTheme.PRIMARY,
-};
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
+const createAppLinkTemplate = (proxies: TemplateProxy<typeof AppLink>[]) => (
+    createTemplate<typeof AppLink>(proxies, AppLink)
+);
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-    theme: AppLinkTheme.SECONDARY,
-};
-
-export const SecondaryDark = Template.bind({});
-SecondaryDark.args = {
-    theme: AppLinkTheme.SECONDARY,
-};
-SecondaryDark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const Disabled = Template.bind({});
-Disabled.args = {
-    theme: AppLinkTheme.DISABLED,
-};
-
-export const DisabledDark = Template.bind({});
-DisabledDark.args = {
-    theme: AppLinkTheme.DISABLED,
-};
-DisabledDark.decorators = [ThemeDecorator(Theme.DARK)];
+export const Primary = createAppLinkTemplate([
+    themeCreator(AppLinkTheme.PRIMARY),
+    appThemeCreator(Theme.LIGHT),
+]);
+export const PrimaryDark = createAppLinkTemplate([
+    themeCreator(AppLinkTheme.PRIMARY),
+    appThemeCreator(Theme.DARK),
+]);
+export const Secondary = createAppLinkTemplate([
+    themeCreator(AppLinkTheme.SECONDARY),
+    appThemeCreator(Theme.LIGHT),
+]);
+export const SecondaryDark = createAppLinkTemplate([
+    themeCreator(AppLinkTheme.SECONDARY),
+    appThemeCreator(Theme.DARK),
+]);
+export const Disabled = createAppLinkTemplate([
+    themeCreator(AppLinkTheme.DISABLED),
+    appThemeCreator(Theme.LIGHT),
+]);
+export const DisabledDark = createAppLinkTemplate([
+    themeCreator(AppLinkTheme.DISABLED),
+    appThemeCreator(Theme.DARK),
+]);

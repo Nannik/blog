@@ -24,20 +24,24 @@ module.exports = {
         'unused-imports',
     ],
     rules: {
-        indent: [2, 4],
+        indent: [ 2, 4 ],
         'i18next/no-literal-string': [
             'error',
             {
                 markupOnly: true,
-                ignoreAttribute: ['data-testid'],
+                ignoreAttribute: [ 'data-testid' ],
             },
         ],
-        'react/jsx-indent': [2, 4],
-        'react/jsx-indent-props': [2, 4],
-        'max-len': [2, { code: 120, ignoreComments: true }],
+        'react/jsx-curly-spacing': [ 'error', { when: 'always' } ],
+        'react/jsx-indent': [ 2, 4 ],
+        'react/jsx-indent-props': [ 2, 4 ],
+        'max-len': [ 2, { code: 120, ignoreComments: true } ],
+        'object-curly-spacing': [ 'error', 'always' ],
+        'array-bracket-spacing': [ 'error', 'always' ],
         'unused-imports/no-unused-imports': 'error',
         'no-unused-vars': 'warn',
         'react/jsx-props-no-spreading': 'warn',
+        'no-plusplus': 'off',
         'import/prefer-default-export': 'off',
         'import/no-unresolved': 'off',
         'import/extensions': 'off',
@@ -49,15 +53,27 @@ module.exports = {
         'no-shadow': 'off',
         'react/function-component-definition': 'off',
         'react/jsx-no-useless-fragment': 'off',
+        'no-extra-boolean-cast': 'off',
     },
     globals: {
         __IS_DEV__: true,
+        JSX: true,
     },
     overrides: [
         {
-            files: ['**/src/**/*.test.{ts,tsx}'],
+            files: [ '**/src/**/*.test.{ts,tsx}' ],
             rules: {
                 'i18next/no-literal-string': 'off',
+            },
+        },
+        {
+            files: [
+                '**/src/**/*.stories.{ts,tsx}',
+                '**/src/**/*stories*.{ts,tsx}',
+            ],
+            rules: {
+                'no-param-reassign': 'off',
+                'react/jsx-props-no-spreading': 'off',
             },
         },
     ],

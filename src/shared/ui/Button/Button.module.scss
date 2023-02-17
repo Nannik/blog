@@ -16,3 +16,34 @@
     color: var(--primary-color);
     background: none;
 }
+
+.background {
+    border: none;
+    background: var(--bg-color);
+    color: var(--primary-color);
+}
+
+.background-inverted {
+    border: none;
+    background: var(--inverted-bg-color);
+    color: var(--inverted-primary-color);
+}
+
+.square {
+    padding: 0;
+
+    &.size-m {
+        width: var(--line-size-m);
+        height: var(--line-size-m);
+    }
+
+    &.size-l {
+        width: var(--line-size-l);
+        height: var(--line-size-l);
+    }
+
+    &.size-xl {
+        width: var(--line-size-xl);
+        height: var(--line-size-xl);
+    }
+}

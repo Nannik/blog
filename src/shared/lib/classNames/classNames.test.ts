@@ -6,7 +6,7 @@ describe('classNames', () => {
     });
 
     test('with additional param', () => {
-        const classname = classNames('testClass', {}, ['add1', 'add2']);
+        const classname = classNames('testClass', {}, [ 'add1', 'add2' ]);
         const expected = 'testClass add1 add2';
 
         expect(classname).toBe(expected);
@@ -27,7 +27,7 @@ describe('classNames', () => {
     });
 
     test('with mods and additional', () => {
-        const classname = classNames('testClass', { mod1: true, mod2: false }, ['add1', 'add2']);
+        const classname = classNames('testClass', { mod1: true, mod2: false }, [ 'add1', 'add2' ]);
         const expected = 'testClass add1 add2 mod1';
 
         expect(classname).toBe(expected);

@@ -1,6 +1,7 @@
 {
   "Test text": "Test-text",
   "Lang": "English",
+  "LangCode": "EN",
   "Toggle": "Toggle",
   "Error happened": "Error happened"
 }

@@ -23,8 +23,8 @@ function AppLink(props: AppLinkProps) {
 
     return (
         <Link
-            className={classNames(cls.AppLink, {}, [className, cls[theme]])}
-            to={to}
+            className={ classNames(cls.AppLink, {}, [ className, cls[theme] ]) }
+            to={ to }
         >
             {children}
         </Link>

@@ -8,7 +8,7 @@ describe('classNames', () => {
     });
 
     test('should have theme class', () => {
-        render(<Button theme={ButtonTheme.CLEAR}>TEST</Button>);
+        render(<Button theme={ ButtonTheme.CLEAR }>TEST</Button>);
         expect(screen.getByText('TEST')).toHaveClass('clear');
     });
 });

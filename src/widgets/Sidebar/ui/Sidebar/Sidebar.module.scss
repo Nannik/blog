@@ -1,8 +1,5 @@
 .Sidebar {
     padding: 20px 0;
-    display: flex;
-    align-items: start;
-    justify-content: center;
     height: calc(100vh - var(--navbar-height));
     width: var(--sidebar-width);
     background: var(--inverted-bg-color);
@@ -10,8 +7,8 @@
     position: relative;
 }
 
-.collapsed {
-    width: var(--sidebar-width-collapsed);
+.lang {
+    margin-left: 10px;
 }
 
 .switchers {
@@ -22,6 +19,55 @@
     bottom: 20px;
 }
 
-.lang {
+.collapseBtn {
+    margin-left: 20px;
+    position: absolute;
+    right: calc(var(--line-size-l) * -1);
+    bottom: var(--line-size-l);
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.item {
+    display: flex;
+    justify-content: start;
+    margin-top: 15px;
+}
+
+.link {
+    opacity: 1;
     margin-left: 10px;
+    font: var(--font-m);
+}
+
+.icon {
+    fill: var(--secondary-color);
+    width: var(--line-size-m);
+    height: var(--line-size-m);
+}
+
+.collapsed {
+    width: var(--sidebar-width-collapsed);
+
+    .switchers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lang {
+        padding: 0;
+    }
+
+    .link {
+        width: 0;
+        opacity: 0;
+        transition: 0.3s;
+    }
 }

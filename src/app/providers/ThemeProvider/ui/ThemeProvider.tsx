@@ -5,15 +5,15 @@ import { LocalStorageKeys } from '@/shared/config';
 const defaultTheme = localStorage.getItem(LocalStorageKeys.theme) as Theme || Theme.LIGHT;
 
 const ThemeProvider: FC = ({ children }) => {
-    const [theme, setTheme] = useState<Theme>(defaultTheme);
+    const [ theme, setTheme ] = useState<Theme>(defaultTheme);
 
     const defaultProps = useMemo(() => ({
         theme,
         setTheme,
-    }), [theme]);
+    }), [ theme ]);
 
     return (
-        <ThemeContext.Provider value={defaultProps}>
+        <ThemeContext.Provider value={ defaultProps }>
             {children}
         </ThemeContext.Provider>
     );

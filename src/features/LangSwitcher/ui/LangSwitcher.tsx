@@ -6,19 +6,25 @@ import { useToggleLanguage } from '@/shared/language';
 
 interface LangSwitcherProps {
     className?: string;
+    short?: boolean;
 }
 
-function LangSwitcher({ className }: LangSwitcherProps) {
+function LangSwitcher(props: LangSwitcherProps) {
+    const {
+        className,
+        short,
+    } = props;
+
     const { toggleLanguage } = useToggleLanguage();
     const { t } = useTranslation();
 
     return (
-        <div className={classNames('', {}, [className])}>
+        <div className={ classNames('', {}, [ className ]) }>
             <Button
-                theme={ButtonTheme.CLEAR}
-                onClick={toggleLanguage}
+                theme={ ButtonTheme.CLEAR }
+                onClick={ toggleLanguage }
             >
-                {t('Lang')}
+                {t(short ? 'LangCode' : 'Lang')}
             </Button>
         </div>
     );

@@ -10,11 +10,6 @@ export default {
     },
 } as ComponentMeta<typeof Navbar>;
 
-const defaultArgs = {};
-
-const Template: ComponentStory<typeof Navbar> = (args) => <Navbar {...args} />;
+const Template: ComponentStory<typeof Navbar> = (args) => <Navbar { ...args } />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-    ...defaultArgs,
-};

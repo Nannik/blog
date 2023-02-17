@@ -12,17 +12,9 @@ export default {
     },
 } as ComponentMeta<typeof PageLoader>;
 
-const defaultArgs = {};
-
-const Template: ComponentStory<typeof PageLoader> = (args) => <PageLoader {...args} />;
+const Template: ComponentStory<typeof PageLoader> = (args) => <PageLoader { ...args } />;
 
 export const Light = Template.bind({});
-Light.args = {
-    ...defaultArgs,
-};
 
 export const Dark = Template.bind({});
-Dark.args = {
-    ...defaultArgs,
-};
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
+Dark.decorators = [ ThemeDecorator(Theme.DARK) ];

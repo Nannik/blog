@@ -11,9 +11,9 @@ const PageError = () => {
     };
 
     return (
-        <div className={classNames(cls.PageError)}>
+        <div className={ classNames(cls.PageError) }>
             {t('Error happened')}
-            <Button onClick={reloadPage}>
+            <Button onClick={ reloadPage }>
                 {t('Reload page')}
             </Button>
         </div>

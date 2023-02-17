@@ -10,6 +10,11 @@ export default {
     },
 } as ComponentMeta<typeof LangSwitcher>;
 
-const Template: ComponentStory<typeof LangSwitcher> = (args) => <LangSwitcher {...args} />;
+const Template: ComponentStory<typeof LangSwitcher> = (args) => <LangSwitcher { ...args } />;
 
 export const Primary = Template.bind({});
+
+export const Short = Template.bind({});
+Short.args = {
+    short: true,
+};
