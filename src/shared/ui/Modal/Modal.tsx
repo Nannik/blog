@@ -45,11 +45,6 @@ const Modal = (props: ModalProps) => {
         }
     }, [ handleClose ]);
 
-    const mods = {
-        [cls.opened]: isOpen,
-        [cls.isClosing]: isClosing,
-    };
-
     useEffect(() => {
         if (isOpen) {
             window.addEventListener('keydown', onKeyDown);
@@ -60,6 +55,11 @@ const Modal = (props: ModalProps) => {
             window.removeEventListener('keydown', onKeyDown);
         };
     }, [ isOpen, onKeyDown ]);
+
+    const mods = {
+        [cls.opened]: isOpen,
+        [cls.isClosing]: isClosing,
+    };
 
     return (
         <Portal>
