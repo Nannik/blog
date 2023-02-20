@@ -1,4 +1,4 @@
-export { classNames } from './classNames/classNames';
-export { createTemplate, TemplateCreator, TemplateProxy } from './tests/storybook/createTemplate';
-export { appThemeCreator } from './tests/storybook/storiesTemplateCreators';
-export { componentRender } from './tests/jest/componentRender';
+export { classNames } from './helpers/classNames/classNames';
+export { createTemplate, TemplateCreator, TemplateProxy } from './helpers/storybook/createTemplate';
+export { appThemeCreator } from './helpers/storybook/storiesTemplateCreators';
+export { componentRender } from './jest/componentRender';
