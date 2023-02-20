@@ -86,6 +86,54 @@ export const ClearExtraLargeDark = createButtonTemplate([
 ]);
 // </editor-fold>
 
+// <editor-fold desc="CLEAR-INVERTED">
+export const ClearInvertedLight = createButtonTemplate([
+    themeCreator(ButtonTheme.CLEAR_INVERTED),
+    appThemeCreator(Theme.LIGHT),
+]);
+
+export const ClearInvertedDark = createButtonTemplate([
+    themeCreator(ButtonTheme.CLEAR_INVERTED),
+    appThemeCreator(Theme.DARK),
+]);
+
+export const ClearInvertedMediumLight = createButtonTemplate([
+    themeCreator(ButtonTheme.CLEAR_INVERTED),
+    sizeCreator(ButtonSize.MEDIUM),
+    appThemeCreator(Theme.LIGHT),
+]);
+
+export const ClearInvertedLargeLight = createButtonTemplate([
+    themeCreator(ButtonTheme.CLEAR_INVERTED),
+    sizeCreator(ButtonSize.LARGE),
+    appThemeCreator(Theme.LIGHT),
+]);
+
+export const ClearInvertedExtraLargeLight = createButtonTemplate([
+    themeCreator(ButtonTheme.CLEAR_INVERTED),
+    sizeCreator(ButtonSize.EXTRA_LARGE),
+    appThemeCreator(Theme.LIGHT),
+]);
+
+export const ClearInvertedMediumDark = createButtonTemplate([
+    themeCreator(ButtonTheme.CLEAR_INVERTED),
+    sizeCreator(ButtonSize.MEDIUM),
+    appThemeCreator(Theme.DARK),
+]);
+
+export const ClearInvertedLargeDark = createButtonTemplate([
+    themeCreator(ButtonTheme.CLEAR_INVERTED),
+    sizeCreator(ButtonSize.LARGE),
+    appThemeCreator(Theme.DARK),
+]);
+
+export const ClearInvertedExtraLargeDark = createButtonTemplate([
+    themeCreator(ButtonTheme.CLEAR_INVERTED),
+    sizeCreator(ButtonSize.EXTRA_LARGE),
+    appThemeCreator(Theme.DARK),
+]);
+// </editor-fold>
+
 // <editor-fold desc="OUTLINE">
 export const OutlineLight = createButtonTemplate([
     themeCreator(ButtonTheme.OUTLINE),

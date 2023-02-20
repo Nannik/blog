@@ -3,5 +3,7 @@
   "Lang": "English",
   "LangCode": "EN",
   "Toggle": "Toggle",
-  "Error happened": "Error happened"
+  "Error happened": "Error happened",
+  "LogIn": "LogIn",
+  "LogOut": "LogOut"
 }

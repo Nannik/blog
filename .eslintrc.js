@@ -22,6 +22,7 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'unused-imports',
+        'react-hooks',
     ],
     rules: {
         indent: [ 2, 4 ],
@@ -39,6 +40,8 @@ module.exports = {
         'object-curly-spacing': [ 'error', 'always' ],
         'array-bracket-spacing': [ 'error', 'always' ],
         'unused-imports/no-unused-imports': 'error',
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error',
         'no-unused-vars': 'warn',
         'react/jsx-props-no-spreading': 'warn',
         'no-plusplus': 'off',
@@ -54,6 +57,10 @@ module.exports = {
         'react/function-component-definition': 'off',
         'react/jsx-no-useless-fragment': 'off',
         'no-extra-boolean-cast': 'off',
+
+        // todo enable this rules and refactor to semantic code
+        'jsx-a11y/no-static-element-interactions': 'off',
+        'jsx-a11y/click-events-have-key-events': 'off',
     },
     globals: {
         __IS_DEV__: true,
@@ -72,6 +79,7 @@ module.exports = {
                 '**/src/**/*stories*.{ts,tsx}',
             ],
             rules: {
+                'max-len': 'off',
                 'no-param-reassign': 'off',
                 'react/jsx-props-no-spreading': 'off',
             },

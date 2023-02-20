@@ -5,21 +5,22 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --env port=3000",
+    "storybook": "start-storybook -p 6006 -c ./config/storybook",
+    "storybook:build": "build-storybook -c ./config/storybook",
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "test:ui": "npx loki test",
     "test:ui:ok": "npx loki approve",
     "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
     "test:ui:json": "node scripts/generateVisualJsonReport.js",
     "test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html",
-    "test:ui:report": "npm run test:ui:json && npm run test:ui:html",
+    "test:ui:report": "npm run test:ui:json && npm run test:ui:html && google-chrome .loki/report.html",
+    "test:ui:build": "npm run storybook:build && npm run test:ui",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "lint:scss": "stylelint \"**/*.scss\"",
-    "lint:scss:fix": "stylelint \"**/*.scss\" --fix",
-    "storybook": "start-storybook -p 6006 -c ./config/storybook",
-    "storybook:build": "build-storybook -c ./config/storybook"
+    "lint:scss:fix": "stylelint \"**/*.scss\" --fix"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",

@@ -1,13 +1,19 @@
 .Button {
     color: var(--primary-color);
+    cursor: pointer;
 }
 
-.clear {
+.clear,
+.clear-inverted {
     padding: 0;
     margin: 0;
     border: none;
     background: none;
     outline: none;
+}
+
+.clear-inverted {
+    color: var(--inverted-primary-color);
 }
 
 .outline {

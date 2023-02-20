@@ -3,5 +3,7 @@
   "Lang": "Українська",
   "LangCode": "UA",
   "Toggle": "Переключити",
-  "Error happened": "Сталася помилка"
+  "Error happened": "Сталася помилка",
+  "LogIn": "Увійти",
+  "LogOut": "Вийти"
 }
