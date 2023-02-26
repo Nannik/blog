@@ -1,0 +1,14 @@
+.LoginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 5px;
+    align-self: end;
+    color: #29b8ef;
+}

@@ -57,6 +57,7 @@ module.exports = {
         'react/function-component-definition': 'off',
         'react/jsx-no-useless-fragment': 'off',
         'no-extra-boolean-cast': 'off',
+        'no-param-reassign': 'off',
 
         // todo enable this rules and refactor to semantic code
         'jsx-a11y/no-static-element-interactions': 'off',
@@ -80,7 +81,6 @@ module.exports = {
             ],
             rules: {
                 'max-len': 'off',
-                'no-param-reassign': 'off',
                 'react/jsx-props-no-spreading': 'off',
             },
         },
