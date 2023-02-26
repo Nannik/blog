@@ -21,3 +21,13 @@ body {
     padding: 20px;
     flex-grow: 1;
 }
+
+.align {
+    &-start {
+        align-items: start;
+    }
+
+    &-end {
+        align-items: end;
+    }
+}
