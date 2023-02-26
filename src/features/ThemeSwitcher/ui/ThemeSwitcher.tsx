@@ -5,7 +5,7 @@ import IconDark from '@/shared/assets/icons/theme-dark.svg';
 import { Button, ButtonTheme } from '@/shared/ui';
 
 interface ThemeSwitcherProps {
-    className?: string;
+    className?: string
 }
 
 function ThemeSwitcher({ className }: ThemeSwitcherProps) {

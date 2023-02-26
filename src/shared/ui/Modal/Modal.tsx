@@ -6,10 +6,10 @@ import cls from './Modal.module.scss';
 import { Portal } from '..';
 
 export interface ModalProps {
-    children: ReactNode;
-    isOpen: boolean;
-    className?: string;
-    onClose?: () => void;
+    children: ReactNode
+    isOpen: boolean
+    className?: string
+    onClose?: () => void
     lazy?: boolean
 }
 
