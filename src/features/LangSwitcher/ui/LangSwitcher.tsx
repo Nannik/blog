@@ -5,8 +5,8 @@ import { Button, ButtonTheme } from '@/shared/ui';
 import { useToggleLanguage } from '@/shared/language';
 
 interface LangSwitcherProps {
-    className?: string;
-    short?: boolean;
+    className?: string
+    short?: boolean
 }
 
 function LangSwitcher(props: LangSwitcherProps) {

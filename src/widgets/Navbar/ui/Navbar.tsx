@@ -6,7 +6,7 @@ import { Button, ButtonTheme } from '@/shared/ui';
 import { LoginModal } from '@/features/AuthByUserName/ui/LoginModal/LoginModal';
 
 interface NavbarProps {
-    className?: string;
+    className?: string
 }
 
 function Navbar({ className }: NavbarProps) {

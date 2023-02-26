@@ -10,7 +10,7 @@ export enum InputSize {
 }
 
 interface InputProps extends AppPropsType, InputHTMLAttributes<HTMLInputElement> {
-    className?: string;
+    className?: string
     fontSize?: InputSize
     autoFocus?: boolean
 }

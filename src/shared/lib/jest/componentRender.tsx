@@ -8,8 +8,8 @@ import { StateSchema } from '@/app/providers/StoreProvider/config/StateSchema';
 import i18nForTests from '@/shared/config/i18n/i18nForTests';
 
 export interface componentRenderOptions {
-    route?: string;
-    initialState?: DeepPartial<StateSchema>;
+    route?: string
+    initialState?: DeepPartial<StateSchema>
 }
 
 export function componentRender(component: ReactNode, options: componentRenderOptions = {}) {

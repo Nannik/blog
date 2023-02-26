@@ -12,12 +12,12 @@ import MainIcon from '@/shared/assets/icons/main-icon.svg';
 import AboutIcon from '@/shared/assets/icons/about-icon.svg';
 
 interface SidebarProps {
-    className?: string;
+    className?: string
 }
 
 interface LinkData {
-    to: string;
-    text: string;
+    to: string
+    text: string
     icon: JSX.Element
 }
 

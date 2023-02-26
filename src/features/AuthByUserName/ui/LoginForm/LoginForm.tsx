@@ -4,7 +4,7 @@ import cls from './LoginForm.module.scss';
 import { Button, ButtonTheme, Input } from '@/shared/ui';
 
 interface LoginFormProps {
-    className?: string;
+    className?: string
 }
 
 const LoginForm = ({ className }: LoginFormProps) => {

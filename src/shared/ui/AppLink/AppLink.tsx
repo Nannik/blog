@@ -9,7 +9,7 @@ export enum AppLinkTheme {
 }
 
 interface AppLinkProps extends LinkProps{
-    className?: string;
+    className?: string
     theme?: AppLinkTheme
 }
 

@@ -34,6 +34,7 @@ module.exports = {
             },
         ],
         'react/jsx-curly-spacing': [ 'error', { when: 'always' } ],
+        '@typescript-eslint/member-delimiter-style': [ 'error', { multiline: { delimiter: 'none' } } ],
         'react/jsx-indent': [ 2, 4 ],
         'react/jsx-indent-props': [ 2, 4 ],
         'max-len': [ 2, { code: 120, ignoreComments: true } ],
