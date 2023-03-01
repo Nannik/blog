@@ -60,9 +60,8 @@ const Modal = (props: ModalProps) => {
     }, [ isOpen, onKeyDown ]);
 
     useEffect(() => {
-        if (isOpen) {
-            setIsMounted(true);
-        }
+        console.log('set is mounted', isOpen);
+        setIsMounted(isOpen);
     }, [ isOpen ]);
 
     const mods = {

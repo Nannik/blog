@@ -1,5 +1,5 @@
 import { Modal } from '@/shared/ui';
-import { LoginForm } from '../LoginForm/LoginForm';
+import { LoginFormLazy } from '@/features/AuthByUserName/ui/LoginForm/LoginFormLazy';
 
 interface LoginModalProps {
     className?: string
@@ -21,7 +21,7 @@ const LoginModal = (props: LoginModalProps) => {
             onClose={ onClose }
             lazy
         >
-            <LoginForm />
+            <LoginFormLazy />
         </Modal>
     );
 };
