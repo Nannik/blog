@@ -34,6 +34,13 @@ const themeCreator: ButtonTemplateCreator<ButtonTheme> = (theme) => (template) =
     return template;
 };
 
+const disabledCreator: ButtonTemplateCreator<boolean> = (disabled) => (template) => {
+    if (!template.args) template.args = {};
+    template.args.disabled = disabled;
+
+    return template;
+};
+
 const createButtonTemplate = (templateProxies: TemplateProxy<typeof Button>[]) => (
     createTemplate<typeof Button>(templateProxies, Button)
 );
@@ -136,6 +143,12 @@ export const ClearInvertedExtraLargeDark = createButtonTemplate([
 
 // <editor-fold desc="OUTLINE">
 export const OutlineLight = createButtonTemplate([
+    themeCreator(ButtonTheme.OUTLINE),
+    appThemeCreator(Theme.LIGHT),
+]);
+
+export const OutlineLightDisabled = createButtonTemplate([
+    disabledCreator(true),
     themeCreator(ButtonTheme.OUTLINE),
     appThemeCreator(Theme.LIGHT),
 ]);

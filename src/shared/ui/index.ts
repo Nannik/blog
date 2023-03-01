@@ -1,5 +1,6 @@
-export { AppLink } from './AppLink/AppLink';
+export { Text, TextTheme } from './Text/Text';
 export { Button, ButtonTheme } from './Button/Button';
+export { AppLink } from './AppLink/AppLink';
 export { Loader } from './Loader/Loader';
 export { Modal } from './Modal/Modal';
 export { Portal } from './Portal/Portal';

@@ -4,6 +4,10 @@
   "LangCode": "EN",
   "Toggle": "Toggle",
   "Error happened": "Error happened",
-  "LogIn": "LogIn",
-  "LogOut": "LogOut"
+  "Log in": "Log in",
+  "Log out": "Log out",
+  "Username": "Username",
+  "Password": "Password",
+  "Incorrect username or password": "Incorrect username or password",
+  "Authorization form": "Authorization form"
 }

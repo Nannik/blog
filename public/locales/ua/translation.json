@@ -4,6 +4,10 @@
   "LangCode": "UA",
   "Toggle": "Переключити",
   "Error happened": "Сталася помилка",
-  "LogIn": "Увійти",
-  "LogOut": "Вийти"
+  "Log in": "Увійти",
+  "Log out": "Вийти",
+  "Username": "Ім'я користувача",
+  "Password": "Пароль",
+  "Incorrect username of password": "Не вірне ім'я або пароль",
+  "Authorization form": "Форма авторизації"
 }

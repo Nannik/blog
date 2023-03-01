@@ -1,4 +1,6 @@
-import { InputHTMLAttributes, useEffect, useRef } from 'react';
+import React, {
+    InputHTMLAttributes, memo, useEffect, useRef,
+} from 'react';
 import { classNames } from '@/shared/lib';
 import cls from './Input.module.scss';
 import { AppPropsType } from '@/shared/types';
@@ -9,17 +11,22 @@ export enum InputSize {
     EXTRA_LARGE = 'size-xl',
 }
 
-interface InputProps extends AppPropsType, InputHTMLAttributes<HTMLInputElement> {
+type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>
+
+interface InputProps extends AppPropsType, HTMLInputProps {
     className?: string
     fontSize?: InputSize
     autoFocus?: boolean
+    onChange?: (value: string) => void
 }
 
-const Input = (props: InputProps) => {
+const Input = memo((props: InputProps) => {
     const {
         className,
         fontSize,
         autoFocus,
+        onChange,
+        ...otherProps
     } = props;
 
     const ref = useRef<HTMLInputElement>(null);
@@ -30,14 +37,19 @@ const Input = (props: InputProps) => {
         }
     }, [ autoFocus ]);
 
+    const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+        onChange?.(e.target.value);
+    };
+
     return (
         <input
             ref={ ref }
             className={ classNames(cls.Input, {}, [ className, cls[fontSize] ]) }
-            { ...props }
+            onChange={ onChangeHandler }
+            { ...otherProps }
         />
     );
-};
+});
 
 export {
     Input,
