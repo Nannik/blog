@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { LoginSchema } from '../types/LoginSchema';
-import { loginByUserName } from '../services/loginByUserName/loginByUserName';
+import { loginByUsername } from '../services/loginByUsername/loginByUsername';
 
 const initialState: LoginSchema = {
     error: '',
@@ -22,14 +22,14 @@ const loginSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
-            .addCase(loginByUserName.pending, (state) => {
+            .addCase(loginByUsername.pending, (state) => {
                 state.isLoading = true;
                 state.error = undefined;
             })
-            .addCase(loginByUserName.fulfilled, (state, action) => {
+            .addCase(loginByUsername.fulfilled, (state, action) => {
                 state.isLoading = false;
             })
-            .addCase(loginByUserName.rejected, (state, action) => {
+            .addCase(loginByUsername.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.payload;
             });

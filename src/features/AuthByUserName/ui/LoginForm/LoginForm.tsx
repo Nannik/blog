@@ -7,7 +7,7 @@ import {
     Button, ButtonTheme, Input, Text, TextTheme,
 } from '@/shared/ui';
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
-import { loginByUserName } from '../../model/services/loginByUserName/loginByUserName';
+import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
 import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
@@ -39,7 +39,7 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
     }, [ dispatch ]);
 
     const onLoginClick = useCallback(() => {
-        dispatch(loginByUserName({ username, password }));
+        dispatch(loginByUsername({ username, password }));
     }, [ dispatch, password, username ]);
 
     return (
@@ -47,17 +47,22 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
             removeAfterUnmount
             reducers={ initialReducers }
         >
-            <div className={ classNames(cls.LoginForm, {}, [ className ]) }>
+            <div
+                data-testid="login-form"
+                className={ classNames(cls.LoginForm, {}, [ className ]) }
+            >
                 <Text title={ t('Authorization form') } />
 
                 {error && (
                     <Text
+                        data-testid="error"
                         theme={ TextTheme.ERROR }
                         text={ t('Incorrect username or password') }
                     />
                 )}
 
                 <Input
+                    data-testid="username-field"
                     onChange={ onUsernameChange }
                     autoFocus
                     type="text"
@@ -65,14 +70,15 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
                     value={ username }
                 />
                 <Input
+                    data-testid="password-field"
                     onChange={ onPasswordChange }
                     type="password"
                     placeholder={ t('Password') }
                     value={ password }
                 />
                 <Button
-                    className={ cls.btn }
                     data-testid="login-btn"
+                    className={ cls.btn }
                     theme={ ButtonTheme.OUTLINE }
                     onClick={ onLoginClick }
                     disabled={ isLoading }

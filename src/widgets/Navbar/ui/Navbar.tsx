@@ -13,12 +13,12 @@ interface NavbarProps {
 
 function Navbar({ className }: NavbarProps) {
     const { t } = useTranslation();
-    const [ isLogInModalOpen, setIsLogInModalOpen ] = useState(false);
+    const [ isLoginModalOpen, setIsLoginModalOpen ] = useState(false);
     const authData = useSelector(getUserAuthData);
     const dispatch = useDispatch();
 
     const openLoginModal = useCallback(() => {
-        setIsLogInModalOpen((isOpen) => !isOpen);
+        setIsLoginModalOpen((isOpen) => !isOpen);
     }, []);
 
     const logout = useCallback(() => {
@@ -47,10 +47,12 @@ function Navbar({ className }: NavbarProps) {
                 {t('Log in')}
             </Button>
 
-            <LoginModal
-                isOpen={ isLogInModalOpen }
-                onClose={ () => setIsLogInModalOpen(false) }
-            />
+            {isLoginModalOpen && (
+                <LoginModal
+                    isOpen={ isLoginModalOpen }
+                    onClose={ () => setIsLoginModalOpen(false) }
+                />
+            )}
         </div>
 
     );

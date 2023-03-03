@@ -23,8 +23,12 @@ const Text: FC<TextProps> = (props) => {
         theme,
     } = props;
 
+    const mods = {
+        [cls[theme]]: theme,
+    };
+
     return (
-        <div className={ classNames(cls.Text, {}, [ className, cls[theme] ]) }>
+        <div className={ classNames(cls.Text, mods, [ className ]) }>
             {title && <p className={ cls.title }>{title}</p>}
             {text && <p className={ cls.text }>{text}</p>}
         </div>
