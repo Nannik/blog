@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Modal } from '@/shared/ui';
 import { LoginFormLazy } from '@/features/AuthByUserName/ui/LoginForm/LoginFormLazy';
 
@@ -7,7 +8,7 @@ interface LoginModalProps {
     onClose: () => void
 }
 
-const LoginModal = (props: LoginModalProps) => {
+const LoginModal = memo((props: LoginModalProps) => {
     const {
         className,
         isOpen,
@@ -21,10 +22,10 @@ const LoginModal = (props: LoginModalProps) => {
             onClose={ onClose }
             lazy
         >
-            <LoginFormLazy />
+            <LoginFormLazy onSuccess={ onClose } />
         </Modal>
     );
-};
+});
 
 export {
     LoginModal,

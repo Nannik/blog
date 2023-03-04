@@ -1,9 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { memo } from 'react';
 import { Button } from '@/shared/ui';
 import { counterActions } from '@/entities/Counter';
 import { getCounterValue } from '@/entities/Counter/model/selectors/getCounterValue/getCounterValue';
 
-const Counter = () => {
+const Counter = memo(() => {
     const dispatch = useDispatch();
     const value = useSelector(getCounterValue);
 
@@ -32,7 +33,7 @@ const Counter = () => {
             </Button>
         </div>
     );
-};
+});
 
 export {
     Counter,
