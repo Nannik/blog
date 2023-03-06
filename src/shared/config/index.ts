@@ -1,1 +1,1 @@
-export { LocalStorageKeys } from './localStorageKeys/localStorageKeys';
+export { LocalStorageKeys } from '../const/localStorageKeys';

@@ -1,4 +1,6 @@
-import React, { FC, useMemo, useState } from 'react';
+import React, {
+    FC, useMemo, useState,
+} from 'react';
 import { Theme, ThemeContext } from '@/shared/theme';
 import { LocalStorageKeys } from '@/shared/config';
 

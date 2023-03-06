@@ -1,39 +1,31 @@
-import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { memo, useMemo, useState } from 'react';
 import { classNames } from '@/shared/lib';
-import { AppLink, Button, ButtonTheme } from '@/shared/ui';
+import { Button, ButtonTheme } from '@/shared/ui';
 import { ThemeSwitcher } from '@/features/ThemeSwitcher';
 import { LangSwitcher } from '@/features/LangSwitcher';
 import cls from './Sidebar.module.scss';
 import { ButtonSize } from '@/shared/ui/Button/Button';
-import { AppLinkTheme } from '@/shared/ui/AppLink/AppLink';
-import { RoutePaths } from '@/app/router/config/routerConfig';
-import MainIcon from '@/shared/assets/icons/main-icon.svg';
-import AboutIcon from '@/shared/assets/icons/about-icon.svg';
+import { SidebarItem } from '@/widgets/Sidebar/ui/SidebarItem/SidebarItem';
+import { SidebarItemsList } from '../../model/sidebarItemsList';
 
 interface SidebarProps {
     className?: string
 }
 
-interface LinkData {
-    to: string
-    text: string
-    icon: JSX.Element
-}
-
-function Sidebar({ className }: SidebarProps) {
+const Sidebar = memo(({ className }: SidebarProps) => {
     const [ collapsed, setCollapsed ] = useState(false);
 
     const toggleCollapsed = () => {
         setCollapsed((collapsed) => !collapsed);
     };
 
-    const location = useLocation();
-
-    const linksData: LinkData[] = [
-        { to: RoutePaths.main, icon: <MainIcon className={ cls.icon } />, text: 'Main' },
-        { to: RoutePaths.about, icon: <AboutIcon className={ cls.icon } />, text: 'About' },
-    ];
+    const itemsList = useMemo(() => SidebarItemsList.map((item) => (
+        <SidebarItem
+            key={ item.to }
+            item={ item }
+            collapsed={ collapsed }
+        />
+    )), [ collapsed ]);
 
     return (
         <div
@@ -52,19 +44,7 @@ function Sidebar({ className }: SidebarProps) {
             </Button>
 
             <div className={ cls.items }>
-                {linksData.map((data) => (
-                    <AppLink
-                        key={ data.to }
-                        className={ cls.item }
-                        theme={ location.pathname === data.to ? AppLinkTheme.DISABLED : AppLinkTheme.SECONDARY }
-                        to={ data.to }
-                    >
-                        {data.icon}
-                        <span className={ cls.link }>
-                            {data.text}
-                        </span>
-                    </AppLink>
-                ))}
+                { itemsList }
             </div>
 
             <div className={ cls.switchers }>
@@ -76,7 +56,7 @@ function Sidebar({ className }: SidebarProps) {
             </div>
         </div>
     );
-}
+});
 
 export {
     Sidebar,

@@ -65,6 +65,7 @@ module.exports = {
         'jsx-a11y/click-events-have-key-events': 'off',
     },
     globals: {
+        __API__: true,
         __IS_DEV__: true,
         JSX: true,
     },

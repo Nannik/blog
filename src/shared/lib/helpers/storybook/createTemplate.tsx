@@ -1,4 +1,4 @@
-import React, { FC, JSXElementConstructor } from 'react';
+import React, { JSXElementConstructor } from 'react';
 import { ComponentStory } from '@storybook/react';
 
 export type TemplateProxy
@@ -10,7 +10,7 @@ export type TemplateCreator
     (value: T) => TemplateProxy<K>;
 
 export const createTemplate = <T extends keyof JSX.IntrinsicElements | JSXElementConstructor<any>>
-    (templateProxies: TemplateProxy<T>[], Component: FC): ComponentStory<T> => {
+    (templateProxies: TemplateProxy<T>[], Component: any): ComponentStory<T> => {
     let Template: ComponentStory<any> = (args) => <Component { ...args } />;
 
     for (let i = 0; i < templateProxies.length; i++) {

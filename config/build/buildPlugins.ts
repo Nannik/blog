@@ -6,8 +6,9 @@ import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import { BuildOptions } from './types/config';
 
 export const buildPlugins = (options: BuildOptions): webpack.WebpackPluginInstance[] => {
-    const { paths, isDev } = options;
+    const { paths, isDev, apiUrl } = options;
 
+    console.log(apiUrl);
     const plugins = [
         new HtmlWebpackPlugin({
             template: paths.html,
@@ -17,7 +18,8 @@ export const buildPlugins = (options: BuildOptions): webpack.WebpackPluginInstan
             chunkFilename: 'css/[name].[contenthash:8].css',
         }),
         new webpack.DefinePlugin({
-            __IS_DEV__: isDev,
+            __IS_DEV__: JSON.stringify(isDev),
+            __API__: JSON.stringify(apiUrl),
         }),
         new webpack.ProgressPlugin(),
     ];

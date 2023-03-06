@@ -8,6 +8,7 @@ import path from 'path';
 export default {
     globals: {
         __IS_DEV__: true,
+        __API__: '',
     },
 
     // Automatically clear mock calls, instances and results before every test
@@ -40,6 +41,7 @@ export default {
         '\\.s?css$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
         '@/(.*)': '<rootDir>src/$1',
+        '^axios$': require.resolve('axios'),
     },
 
     setupFilesAfterEnv: [ '<rootDir>config/jest/setupTests.ts' ],

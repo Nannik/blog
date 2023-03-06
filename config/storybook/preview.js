@@ -15,6 +15,7 @@ export const parameters = {
     },
 };
 
+addDecorator(SuspenseDecorator);
 addDecorator(StyleDecorator);
 addDecorator(ThemeDecorator(Theme.LIGHT));
 addDecorator(RouterDecorator);

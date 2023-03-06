@@ -1,9 +1,10 @@
 import { useTranslation } from 'react-i18next';
+import { memo } from 'react';
 import { Button } from '@/shared/ui';
 import cls from './PageError.module.scss';
 import { classNames } from '@/shared/lib';
 
-const PageError = () => {
+const PageError = memo(() => {
     const { t } = useTranslation();
 
     const reloadPage = () => {
@@ -18,7 +19,7 @@ const PageError = () => {
             </Button>
         </div>
     );
-};
+});
 
 export {
     PageError,
