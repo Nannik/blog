@@ -1,29 +1,37 @@
 import React, { Suspense, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { useTheme } from '@/shared/theme';
 import { classNames } from '@/shared/lib';
 import { AppRouter } from '@/app/router';
 import { Navbar } from '@/widgets/Navbar';
 import { Sidebar } from '@/widgets/Sidebar';
 import { userActions } from '@/entities/User';
+import { useTheme } from '@/shared/theme';
 
 function App() {
-    const { theme } = useTheme();
     const dispatch = useDispatch();
+    const { theme } = useTheme();
 
     useEffect(() => {
         dispatch(userActions.initAuthData());
     }, [ dispatch ]);
-    document.body.className = theme;
+
+    useEffect(() => {
+        document.body.className = theme;
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
-        <div className={ classNames('app') }>
+        <div className={ classNames('app', {}, []) }>
             <Suspense fallback="">
-                <Navbar />
-                <div className="page-content">
-                    <Sidebar />
-                    <AppRouter />
+                <div className="app-content">
+                    <Navbar />
+                    <div className="page-content">
+                        <Sidebar />
+                        <AppRouter />
+                    </div>
                 </div>
+                <div id="modal-content" />
             </Suspense>
         </div>
     );

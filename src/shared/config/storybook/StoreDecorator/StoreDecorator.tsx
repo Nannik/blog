@@ -1,7 +1,6 @@
 import { Story } from '@storybook/react';
 import { DeepPartial, ReducersMapObject } from '@reduxjs/toolkit';
-import { StateSchema } from '@/app/providers/StoreProvider/config/StateSchema';
-import { StoreProvider } from '@/app/providers/StoreProvider';
+import { StoreProvider, StateSchema } from '@/app/providers/StoreProvider';
 import { loginReducer } from '@/features/AuthByUserName/model/slice/loginSlice';
 
 const defaultAsyncReducers: DeepPartial<ReducersMapObject<StateSchema>> = {

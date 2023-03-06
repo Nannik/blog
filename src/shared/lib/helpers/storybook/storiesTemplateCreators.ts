@@ -2,7 +2,7 @@ import { DeepPartial } from '@reduxjs/toolkit';
 import { TemplateCreator } from '@/shared/lib';
 import { Theme } from '@/shared/theme';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { StateSchema } from '@/app/providers/StoreProvider/config/StateSchema';
+import { StateSchema } from '@/app/providers/StoreProvider';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export const appThemeCreator: TemplateCreator<Theme, any> = (theme) => (template) => {

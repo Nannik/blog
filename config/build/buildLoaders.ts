@@ -19,13 +19,13 @@ export const buildLoaders = (options: BuildOptions): webpack.RuleSetRule[] => {
     const cssLoader = buildCssLoader(isDev);
 
     const babelLoader = {
-        test: /\.m?js$/,
+        test: /\.(js|jsx|tsx)$/,
         exclude: /node_modules/,
         use: {
             loader: 'babel-loader',
             options: {
                 presets: [
-                    [ '@babel/preset-env', { targets: 'defaults' } ],
+                    [ '@babel/preset-env' ],
                 ],
             },
         },

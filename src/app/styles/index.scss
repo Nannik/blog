@@ -3,6 +3,11 @@
 @import "./variables/global";
 @import "./reset";
 
+#modal-content {
+    position: absolute;
+    top: 0;
+}
+
 body {
     font: var(--font-m);
     color: var(--primary-color);
