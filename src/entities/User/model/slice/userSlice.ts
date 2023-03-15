@@ -3,7 +3,7 @@ import { User, UserSchema } from '../types/user';
 import { LocalStorageKeys } from '@/shared/const/localStorageKeys';
 
 const initialState: UserSchema = {
-    authData: null,
+    authData: undefined,
 };
 
 const userSlice = createSlice({

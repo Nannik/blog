@@ -29,10 +29,10 @@ const Button = memo((props: ButtonProps) => {
     const {
         children,
         className,
-        theme,
-        square,
-        size,
-        disabled,
+        theme = ButtonTheme.OUTLINE,
+        square = false,
+        size = ButtonSize.MEDIUM,
+        disabled = false,
         ...otherProps
     } = props;
 
@@ -41,7 +41,7 @@ const Button = memo((props: ButtonProps) => {
         [cls.disabled]: disabled,
     };
 
-    const additional: string[] = [
+    const additional = [
         className,
         cls[theme],
         cls[size],

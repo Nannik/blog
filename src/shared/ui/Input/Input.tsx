@@ -23,7 +23,7 @@ interface InputProps extends AppPropsType, HTMLInputProps {
 const Input = memo((props: InputProps) => {
     const {
         className,
-        fontSize,
+        fontSize = InputSize.MEDIUM,
         autoFocus,
         onChange,
         ...otherProps

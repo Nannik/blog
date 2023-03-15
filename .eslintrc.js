@@ -59,6 +59,7 @@ module.exports = {
         'react/jsx-no-useless-fragment': 'off',
         'no-extra-boolean-cast': 'off',
         'no-param-reassign': 'off',
+        'no-undef': 'off',
 
         // todo enable this rules and refactor to semantic code
         'jsx-a11y/no-static-element-interactions': 'off',

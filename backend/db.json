@@ -26,13 +26,13 @@
     }
   ],
   "profile": {
-    "first": "Тимур",
-    "lastname": "Ульби",
+    "first": "TestFirstName",
+    "lastname": "TestLastName",
     "age": 22,
-    "currency": "RUB",
-    "country": "Russia",
-    "city": "Moscow",
+    "currency": "UAH",
+    "country": "Ukraine",
+    "city": "Kiev",
     "username": "admin",
-    "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
+    "avatar": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.kinopoisk.ru%2Ffilm%2F251733%2F&psig=AOvVaw0nLwfG9UAt_1rucUsbhnxT&ust=1678893720301000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCKjOnNDc2_0CFQAAAAAdAAAAABAE"
   }
 }

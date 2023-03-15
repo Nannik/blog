@@ -20,7 +20,7 @@ i18n
         },
     });
 
-const lang = localStorage.getItem(LocalStorageKeys.languageCode);
+const lang = localStorage.getItem(LocalStorageKeys.languageCode) || undefined;
 i18n.changeLanguage(lang);
 
 export default i18n;

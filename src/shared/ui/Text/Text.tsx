@@ -6,6 +6,7 @@ import { AppPropsType } from '@/shared/types';
 export enum TextTheme {
     DISABLED = 'disabled',
     ERROR = 'error',
+    PRIMARY = 'primary'
 }
 
 interface TextProps extends AppPropsType {
@@ -20,7 +21,7 @@ const Text = memo((props: TextProps) => {
         className,
         title,
         text,
-        theme,
+        theme = TextTheme.PRIMARY,
     } = props;
 
     const mods = {

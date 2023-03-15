@@ -1,5 +1,5 @@
 import React, {
-    MouseEvent, ReactNode, useCallback, useEffect, useRef, useState,
+    MouseEvent, MutableRefObject, ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react';
 import { classNames } from '@/shared/lib';
 import cls from './Modal.module.scss';
@@ -26,7 +26,7 @@ const Modal = (props: ModalProps) => {
 
     const [ isClosing, setIsClosing ] = useState(false);
     const [ isMounted, setIsMounted ] = useState(false);
-    const timerRef = useRef < ReturnType < typeof setTimeout >>(null);
+    const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
 
     const handleClose = useCallback(() => {
         if (onClose) {
