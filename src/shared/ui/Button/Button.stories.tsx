@@ -195,6 +195,60 @@ export const OutlineExtraLargeDark = createButtonTemplate([
 ]);
 // </editor-fold>
 
+// <editor-fold desc="OUTLINE_RED">
+export const OutlineRedLight = createButtonTemplate([
+    themeCreator(ButtonTheme.OUTLINE_RED),
+    appThemeCreator(Theme.LIGHT),
+]);
+
+export const OutlineRedLightDisabled = createButtonTemplate([
+    disabledCreator(true),
+    themeCreator(ButtonTheme.OUTLINE_RED),
+    appThemeCreator(Theme.LIGHT),
+]);
+
+export const OutlineRedDark = createButtonTemplate([
+    themeCreator(ButtonTheme.OUTLINE_RED),
+    appThemeCreator(Theme.DARK),
+]);
+
+export const OutlineRedMediumLight = createButtonTemplate([
+    themeCreator(ButtonTheme.OUTLINE_RED),
+    sizeCreator(ButtonSize.MEDIUM),
+    appThemeCreator(Theme.LIGHT),
+]);
+
+export const OutlineRedLargeLight = createButtonTemplate([
+    themeCreator(ButtonTheme.OUTLINE_RED),
+    sizeCreator(ButtonSize.LARGE),
+    appThemeCreator(Theme.LIGHT),
+]);
+
+export const OutlineRedExtraLargeLight = createButtonTemplate([
+    themeCreator(ButtonTheme.OUTLINE_RED),
+    sizeCreator(ButtonSize.EXTRA_LARGE),
+    appThemeCreator(Theme.LIGHT),
+]);
+
+export const OutlineRedMediumDark = createButtonTemplate([
+    themeCreator(ButtonTheme.OUTLINE_RED),
+    sizeCreator(ButtonSize.MEDIUM),
+    appThemeCreator(Theme.DARK),
+]);
+
+export const OutlineRedLargeDark = createButtonTemplate([
+    themeCreator(ButtonTheme.OUTLINE_RED),
+    sizeCreator(ButtonSize.LARGE),
+    appThemeCreator(Theme.DARK),
+]);
+
+export const OutlineRedExtraLargeDark = createButtonTemplate([
+    themeCreator(ButtonTheme.OUTLINE_RED),
+    sizeCreator(ButtonSize.EXTRA_LARGE),
+    appThemeCreator(Theme.DARK),
+]);
+// </editor-fold>
+
 // <editor-fold desc="BACKGROUND">
 export const BackgroundLight = createButtonTemplate([
     themeCreator(ButtonTheme.BACKGROUND),

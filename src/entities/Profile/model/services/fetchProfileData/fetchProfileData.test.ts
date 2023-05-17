@@ -1,6 +1,7 @@
 import { TestAsyncThunk } from '@/shared/lib/jest/TestAsyncThunk';
 import { fetchProfileData, Profile } from '@/entities/Profile';
-import { Country, Currency } from '@/shared/const/common';
+import { Currency } from '@/entities/Currency/model/types/currency';
+import { Country } from '@/entities/Country/model/types/counry';
 
 describe('fetchProfileData.test', () => {
     test('success fetch', async () => {
@@ -33,14 +34,4 @@ describe('fetchProfileData.test', () => {
         expect(thunk.api.get).toHaveBeenCalled();
         expect(result.meta.requestStatus).toBe('rejected');
     });
-
-    // test('fetch error', async () => {
-    //     const thunk = new TestAsyncThunk(loginByUsername);
-    //     thunk.api.post.mockReturnValue(Promise.resolve({ status: 403 }));
-    //     const result = await thunk.callThunk({ username: 'user', password: 'pass' });
-    //
-    //     expect(thunk.dispatch).toHaveBeenCalledTimes(2);
-    //     expect(thunk.api.post).toHaveBeenCalled();
-    //     expect(result.meta.requestStatus).toBe('rejected');
-    // });
 });

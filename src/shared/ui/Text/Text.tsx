@@ -9,11 +9,18 @@ export enum TextTheme {
     PRIMARY = 'primary'
 }
 
+export enum TextAlign {
+    CENTER = 'center',
+    LEFT = 'left',
+    RIGHT = 'right'
+}
+
 interface TextProps extends AppPropsType {
     className?: string
     title?: string
     text?: string
     theme?: TextTheme
+    align?: TextAlign
 }
 
 const Text = memo((props: TextProps) => {
@@ -22,10 +29,12 @@ const Text = memo((props: TextProps) => {
         title,
         text,
         theme = TextTheme.PRIMARY,
+        align = TextAlign.LEFT,
     } = props;
 
     const mods = {
         [cls[theme]]: theme,
+        [cls[align]]: align,
     };
 
     return (

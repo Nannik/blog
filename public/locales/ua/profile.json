@@ -2,5 +2,14 @@
   "Profile": "Профіль",
   "Edit": "Редагувати",
   "First name": "Ім'я",
-  "Last name": "Прізвище"
+  "Last name": "Прізвище",
+  "Error was happened on loading profile": "Сталася помилка при завантаженні сторінки",
+  "Try to reload page": "Спробуйте перезавантажити сторінку",
+  "Save": "Зберігти",
+  "Cancel": "Відміна",
+  "Age": "Вік",
+  "City": "Місто",
+  "Link to avatar": "Посилання на аватар",
+  "Username": "Нікнейм",
+  "Avatar": "Аватар"
 }

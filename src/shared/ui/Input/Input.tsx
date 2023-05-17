@@ -11,20 +11,24 @@ export enum InputSize {
     EXTRA_LARGE = 'size-xl',
 }
 
-type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>
+type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readOnly'>
 
 interface InputProps extends AppPropsType, HTMLInputProps {
     className?: string
+    value?: string | number
     fontSize?: InputSize
     autoFocus?: boolean
+    readonly?: boolean
     onChange?: (value: string) => void
 }
 
 const Input = memo((props: InputProps) => {
     const {
         className,
+        value,
         fontSize = InputSize.MEDIUM,
         autoFocus,
+        readonly,
         onChange,
         ...otherProps
     } = props;
@@ -44,8 +48,10 @@ const Input = memo((props: InputProps) => {
     return (
         <input
             ref={ ref }
+            value={ value }
             className={ classNames(cls.Input, {}, [ className, cls[fontSize] ]) }
             onChange={ onChangeHandler }
+            readOnly={ readonly }
             { ...otherProps }
         />
     );

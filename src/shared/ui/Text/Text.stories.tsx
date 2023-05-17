@@ -1,6 +1,6 @@
 import { ComponentMeta } from '@storybook/react';
 
-import { Text, TextTheme } from './Text';
+import { Text, TextAlign, TextTheme } from './Text';
 import {
     appThemeCreator, createTemplate, TemplateCreator, TemplateProxy,
 } from '@/shared/lib';
@@ -23,6 +23,13 @@ const themeCreator: TextTemplateCreator<TextTheme> = (theme) => (template) => {
     return template;
 };
 
+const alignCreator: TextTemplateCreator<TextAlign> = (align) => (template) => {
+    if (!template.args) template.args = {};
+    template.args.align = align;
+
+    return template;
+};
+
 const textCreator: TextTemplateCreator<'text' | 'title'> = (textType) => (template) => {
     if (!template.args) template.args = {};
     template.args[textType] = 'test text';
@@ -33,6 +40,19 @@ const textCreator: TextTemplateCreator<'text' | 'title'> = (textType) => (templa
 const createTextTemplate = (templateProxies: TemplateProxy<typeof Text>[]) => (
     createTemplate<typeof Text>(templateProxies, Text)
 );
+
+export const Left = createTextTemplate([
+    textCreator('text'),
+    alignCreator(TextAlign.LEFT),
+]);
+export const Center = createTextTemplate([
+    textCreator('text'),
+    alignCreator(TextAlign.CENTER),
+]);
+export const Right = createTextTemplate([
+    textCreator('text'),
+    alignCreator(TextAlign.RIGHT),
+]);
 
 export const Primary = createTextTemplate([
     textCreator('text'),

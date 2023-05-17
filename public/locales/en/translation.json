@@ -9,5 +9,7 @@
   "Username": "Username",
   "Password": "Password",
   "Incorrect username or password": "Incorrect username or password",
-  "Authorization form": "Authorization form"
+  "Authorization form": "Authorization form",
+  "Select currency": "Select currency",
+  "Select country": "Select country"
 }

@@ -12,6 +12,10 @@
     .text {
         color: var(--error-color);
     }
+
+    .title {
+        color: var(--error-color);
+    }
 }
 
 .disabled {
@@ -19,4 +23,16 @@
     .title {
         color: var(--disabled-color);
     }
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
 }

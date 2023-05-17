@@ -9,5 +9,7 @@
   "Username": "Ім'я користувача",
   "Password": "Пароль",
   "Incorrect username of password": "Не вірне ім'я або пароль",
-  "Authorization form": "Форма авторизації"
+  "Authorization form": "Форма авторизації",
+  "Select currency": "Select currency",
+  "Select country": "Select country"
 }

@@ -5,7 +5,8 @@ import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDe
 import { Theme } from '@/shared/theme';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ProfileSchema } from '@/entities/Profile';
-import { Country, Currency } from '@/shared/const/common';
+import { Currency } from '@/entities/Currency/model/types/currency';
+import { Country } from '@/entities/Country/model/types/counry';
 
 export default {
     title: 'pages/ProfilePage',

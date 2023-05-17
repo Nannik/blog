@@ -23,6 +23,13 @@
     background: none;
 }
 
+.outline_red {
+    padding: 10px 15px;
+    border: 1px solid var(--red-light);
+    color: var(--red-light);
+    background: none;
+}
+
 .background {
     border: none;
     background: var(--bg-color);

@@ -28,11 +28,11 @@
   "profile": {
     "first": "TestFirstName",
     "lastname": "TestLastName",
-    "age": 22,
+    "age": 2222,
     "currency": "UAH",
     "country": "Ukraine",
     "city": "Kiev",
     "username": "admin",
-    "avatar": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.kinopoisk.ru%2Ffilm%2F251733%2F&psig=AOvVaw0nLwfG9UAt_1rucUsbhnxT&ust=1678893720301000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCKjOnNDc2_0CFQAAAAAdAAAAABAE"
+    "avatar": "https://yt3.googleusercontent.com/-CFTJHU7fEWb7BYEb6Jh9gm1EpetvVGQqtof0Rbh-VQRIznYYKJxCaqv_9HeBcmJmIsp2vOO9JU=s176-c-k-c0x00ffffff-no-rj"
   }
 }
