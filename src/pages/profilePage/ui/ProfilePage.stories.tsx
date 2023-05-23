@@ -30,6 +30,7 @@ const defaultState: ProfileSchema = {
         first: '',
         lastname: '',
     },
+    validateErrors: [],
 };
 
 const Template: ComponentStory<typeof ProfilePage> = () => <ProfilePage />;

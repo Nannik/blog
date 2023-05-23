@@ -11,5 +11,15 @@
   "City": "Місто",
   "Link to avatar": "Посилання на аватар",
   "Username": "Нікнейм",
-  "Avatar": "Аватар"
+  "Avatar": "Аватар",
+  "Incorrect first name": "Неправильне ім'я",
+  "Incorrect last name": "Неправильна фамілія",
+  "Incorrect age": "Неправильний вік",
+  "Incorrect currency": "Непарвильна валюта",
+  "Incorrect country": "Неправильна країна",
+  "Incorrect city": "Неправильне місто",
+  "Incorrect avatar url": "Неправильна адресса до аватару",
+  "Incorrect username": "Неправильний нікнейм",
+  "Data not specified": "Немає данних",
+  "Server error": "Сталася помилка при обробці данних"
 }

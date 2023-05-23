@@ -11,5 +11,15 @@
   "City": "City",
   "Link to avatar": "Link to avatar",
   "Username": "Username",
-  "Avatar": "Avatar"
+  "Avatar": "Avatar",
+  "Incorrect first name": "Incorrect first name",
+  "Incorrect last name": "Incorrect last name",
+  "Incorrect age": "Incorrect age",
+  "Incorrect currency": "Incorrect currency",
+  "Incorrect country": "Incorrect country",
+  "Incorrect city": "Incorrect city",
+  "Incorrect avatar url": "Incorrect avatar url",
+  "Incorrect username": "Incorrect username",
+  "Data not specified": "Data not specified",
+  "Server error": "Server error"
 }

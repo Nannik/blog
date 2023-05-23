@@ -20,9 +20,9 @@ describe('fetchProfileData.test', () => {
         thunk.api.get.mockReturnValue(Promise.resolve({ data }));
         const result = await thunk.callThunk();
 
-        expect(thunk.dispatch).toHaveBeenCalledTimes(2);
         expect(thunk.api.get).toHaveBeenCalled();
         expect(result.meta.requestStatus).toBe('fulfilled');
+        expect(result.payload).toEqual(data);
     });
 
     test('fetch error', async () => {
