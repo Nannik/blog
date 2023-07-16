@@ -1,15 +1,16 @@
 import React, { Suspense, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib';
 import { AppRouter } from '@/app/router';
 import { Navbar } from '@/widgets/Navbar';
 import { Sidebar } from '@/widgets/Sidebar';
-import { userActions } from '@/entities/User';
+import { getUserMounted, userActions } from '@/entities/User';
 import { useTheme } from '@/shared/theme';
 
 function App() {
     const dispatch = useDispatch();
     const { theme } = useTheme();
+    const isUserMounted = useSelector(getUserMounted);
 
     useEffect(() => {
         dispatch(userActions.initAuthData());
@@ -28,7 +29,7 @@ function App() {
                     <Navbar />
                     <div className="page-content">
                         <Sidebar />
-                        <AppRouter />
+                        {isUserMounted && <AppRouter />}
                     </div>
                 </div>
                 <div id="modal-content" />

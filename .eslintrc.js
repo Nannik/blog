@@ -25,7 +25,7 @@ module.exports = {
         'react-hooks',
     ],
     rules: {
-        indent: [ 2, 4 ],
+        indent: [ 2, 4, { SwitchCase: 1 } ],
         'i18next/no-literal-string': [
             'error',
             {
