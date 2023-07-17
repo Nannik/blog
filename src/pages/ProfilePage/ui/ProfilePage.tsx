@@ -14,7 +14,7 @@ import {
     ProfileCard,
     profileReducer,
 } from '@/entities/Profile';
-import { ProfilePageHeader } from '@/pages/profilePage/ui/ProfilePageHeader/ProfilePageHeader';
+import { ProfilePageHeader } from '@/pages/ProfilePage/ui/ProfilePageHeader/ProfilePageHeader';
 import { profileActions } from '@/entities/Profile/model/slice/profileSlice';
 import { Currency } from '@/entities/Currency';
 import { Country } from '@/entities/Country';
