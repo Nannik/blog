@@ -3,7 +3,7 @@ import { memo, useCallback } from 'react';
 import { Select } from '@/shared/ui';
 import { Country } from '../../model/types/counry';
 import { SelectOption } from '@/shared/ui/Select/Select';
-import { classNames } from '@/shared/lib';
+import { classNames } from '@/shared/lib/helpers/classNames/classNames';
 
 interface CountrySelectProps {
     className?: string

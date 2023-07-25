@@ -1,6 +1,6 @@
 import React, { Suspense, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { classNames } from '@/shared/lib';
+import { classNames } from '@/shared/lib/helpers/classNames/classNames';
 import { AppRouter } from '@/app/router';
 import { Navbar } from '@/widgets/Navbar';
 import { Sidebar } from '@/widgets/Sidebar';

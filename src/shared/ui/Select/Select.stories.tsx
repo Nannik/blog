@@ -1,7 +1,9 @@
 import { ComponentMeta } from '@storybook/react';
 
 import { Select, SelectOption } from './Select';
-import { createTemplate, TemplateCreator, TemplateProxy } from '@/shared/lib';
+import {
+    createTemplate, TemplateCreator, TemplateProxy,
+} from '@/shared/lib/helpers/storybook/createTemplate';
 
 export default {
     title: 'shared/Select',

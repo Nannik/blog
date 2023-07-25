@@ -1,5 +1,5 @@
 import { screen } from '@testing-library/react';
-import { componentRender } from '@/shared/lib';
+import { componentRender } from '@/shared/lib/jest/componentRender';
 import LoginForm from './LoginForm';
 
 describe('LoginForm.test', () => {

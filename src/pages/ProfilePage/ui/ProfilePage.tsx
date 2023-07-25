@@ -1,9 +1,9 @@
 import { memo, useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import {
-    classNames, DynamicModuleLoader, ReducersList, useAppDispatch,
-} from '@/shared/lib';
+import { classNames } from '@/shared/lib/helpers/classNames/classNames';
+import { DynamicModuleLoader, ReducersList } from '@/shared/lib/component/DynamicModuleLoader/DynamicModuleLoader';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import {
     fetchProfileData,
     getProfileError,

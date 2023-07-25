@@ -1,8 +1,8 @@
 import { ComponentMeta } from '@storybook/react';
-
+import { appThemeCreator } from '@/shared/lib/helpers/storybook/storiesTemplateCreators';
 import {
-    appThemeCreator, createTemplate, TemplateProxy,
-} from '@/shared/lib';
+    createTemplate, TemplateProxy,
+} from '@/shared/lib/helpers/storybook/createTemplate';
 import { Theme } from '@/shared/theme';
 import { Modal } from '@/shared/ui';
 

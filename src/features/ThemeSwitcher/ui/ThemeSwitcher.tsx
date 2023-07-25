@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { classNames } from '@/shared/lib';
+import { classNames } from '@/shared/lib/helpers/classNames/classNames';
 import { Theme, useTheme } from '@/shared/theme';
 import IconLight from '@/shared/assets/icons/theme-light.svg';
 import IconDark from '@/shared/assets/icons/theme-dark.svg';

@@ -1,4 +1,4 @@
-import { TemplateCreator } from '@/shared/lib';
+import { TemplateCreator } from '@/shared/lib/helpers/storybook/createTemplate';
 import { Theme } from '@/shared/theme';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { StateSchema } from '@/app/providers/StoreProvider';

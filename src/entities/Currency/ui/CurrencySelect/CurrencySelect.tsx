@@ -3,7 +3,7 @@ import { memo, useCallback } from 'react';
 import { Select } from '@/shared/ui';
 import { Currency } from '@/entities/Currency/model/types/currency';
 import { SelectOption } from '@/shared/ui/Select/Select';
-import { classNames } from '@/shared/lib';
+import { classNames } from '@/shared/lib/helpers/classNames/classNames';
 
 interface CurrencySelectProps {
     className?: string

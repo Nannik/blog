@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import React, { FC } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { classNames } from '@/shared/lib';
+import { classNames } from '@/shared/lib/helpers/classNames/classNames';
 import cls from './SidebarItem.module.scss';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink';
 import { SidebarItemType } from '@/widgets/Sidebar/model/sidebarItemsList';

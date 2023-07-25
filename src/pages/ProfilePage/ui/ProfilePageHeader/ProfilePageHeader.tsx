@@ -1,7 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import React, { useCallback } from 'react';
 import { useSelector } from 'react-redux';
-import { classNames, useAppDispatch } from '@/shared/lib';
+import { classNames } from '@/shared/lib/helpers/classNames/classNames';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import cls from './ProfilePageHeader.module.scss';
 import { profileActions } from '@/entities/Profile/model/slice/profileSlice';
 import { Button, ButtonTheme, Text } from '@/shared/ui';

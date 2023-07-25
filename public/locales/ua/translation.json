@@ -11,5 +11,10 @@
   "Incorrect username of password": "Не вірне ім'я або пароль",
   "Authorization form": "Форма авторизації",
   "Select currency": "Select currency",
-  "Select country": "Select country"
+  "Select country": "Select country",
+
+  "Main": "Головна",
+  "About": "Про нас",
+  "Profile": "Профіль",
+  "Articles": "Статті"
 }

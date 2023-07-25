@@ -1,9 +1,10 @@
 import { ComponentMeta } from '@storybook/react';
 
 import { Text, TextAlign, TextTheme } from './Text';
+import { appThemeCreator } from '@/shared/lib/helpers/storybook/storiesTemplateCreators';
 import {
-    appThemeCreator, createTemplate, TemplateCreator, TemplateProxy,
-} from '@/shared/lib';
+    createTemplate, TemplateCreator, TemplateProxy,
+} from '@/shared/lib/helpers/storybook/createTemplate';
 import { Theme } from '@/shared/theme';
 
 export default {

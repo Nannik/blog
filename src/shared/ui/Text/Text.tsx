@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { classNames } from '@/shared/lib';
+import { classNames } from '@/shared/lib/helpers/classNames/classNames';
 import cls from './Text.module.scss';
 import { AppPropsType } from '@/shared/types';
 

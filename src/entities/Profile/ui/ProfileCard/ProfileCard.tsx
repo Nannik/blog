@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { classNames } from '@/shared/lib';
+import { classNames } from '@/shared/lib/helpers/classNames/classNames';
 import cls from './ProfileCard.module.scss';
 import {
     Input, Loader, Text, TextTheme,

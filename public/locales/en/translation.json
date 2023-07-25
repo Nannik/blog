@@ -11,5 +11,10 @@
   "Incorrect username or password": "Incorrect username or password",
   "Authorization form": "Authorization form",
   "Select currency": "Select currency",
-  "Select country": "Select country"
+  "Select country": "Select country",
+
+  "Main": "Main",
+  "About": "About",
+  "Profile": "Profile",
+  "Articles": "Articles"
 }

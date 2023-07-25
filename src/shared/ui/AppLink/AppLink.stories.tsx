@@ -2,9 +2,10 @@ import { ComponentMeta } from '@storybook/react';
 
 import { AppLink, AppLinkTheme } from './AppLink';
 import { Theme } from '@/shared/theme';
+import { appThemeCreator } from '@/shared/lib/helpers/storybook/storiesTemplateCreators';
 import {
-    appThemeCreator, createTemplate, TemplateCreator, TemplateProxy,
-} from '@/shared/lib';
+    createTemplate, TemplateCreator, TemplateProxy,
+} from '@/shared/lib/helpers/storybook/createTemplate';
 
 export default {
     title: 'shared/AppLink',
